@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using LearnApiUsingMiddleware.Models;
 
 namespace LearnApiUsingMiddleware.Models
 {
@@ -10,5 +11,7 @@ namespace LearnApiUsingMiddleware.Models
         }
 
         public DbSet<Movie> Movies { get; set; }
+        public DbSet<ShoppingItem> ShoppingContext { get; set; }
+
     }
 }

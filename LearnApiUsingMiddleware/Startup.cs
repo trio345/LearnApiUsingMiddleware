@@ -1,6 +1,7 @@
 using LearnApiUsingMiddleware.ActionFilters;
-using LearnApiUsingMiddleware.Demo;
+using LearnApiUsingMiddleware.Filters;
 using LearnApiUsingMiddleware.Models;
+using LearnApiUsingMiddleware.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -39,6 +40,7 @@ namespace LearnApiUsingMiddleware
 
             services.AddScoped<ValidationFilterAttribute>();
             services.AddScoped<ValidateEntityExistAttribute<Movie>>();
+            services.AddScoped<IShoppingCartService, ShoppingCartService>();
 
         }
 
