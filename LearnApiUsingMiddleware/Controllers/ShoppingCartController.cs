@@ -3,7 +3,6 @@ using LearnApiUsingMiddleware.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace LearnApiUsingMiddleware.Controllers
 {
@@ -90,11 +89,11 @@ namespace LearnApiUsingMiddleware.Controllers
         {
             var shopData = _service.GetById(id);
 
-            if ( shopData == null)
+            if (shopData == null)
             {
                 return NotFound();
             }
-            
+
             _service.Remove(id);
             return Ok();
         }
